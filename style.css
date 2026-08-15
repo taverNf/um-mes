@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Instrument+Serif:ital@0;1&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'instrument serif';
+}
+
+body{
+  background-color: #d3a49e;
+  color: #fff;
+}
+
+section{
+  margin: auto;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.hero{
+  justify-content: center;
+  gap: 1.5em;
+
+  & .hero-title{
+    font-size: 4em;
+    font-style: italic;
+    line-height: 1em;
+    text-align: center;
+  }
+  
+  & .hero-subtitle{
+    text-align: center;
+    font-size: 2em;
+
+    & span{
+      background-color: #f7a8e4;
+    }
+  }
+}
+
+section.text-section, section.game-introduction{
+  gap: 2em;
+}
+
+.title{
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.text{
+  font-size: 2em;
+  line-height: 1.2em;
+  font-weight: 400;
+  font-style: italic;
+  text-align: justify;
+}
