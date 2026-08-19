@@ -1,0 +1,15 @@
+#tip{
+  margin-top: 1em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+#inputBox{
+  display: flex;
+  gap: .5em;
+}
+
+.box{
+  width: 100%;
+  aspect-ratio: 1;
+}

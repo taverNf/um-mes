@@ -37,11 +37,11 @@ section.hero{
   & .hero-subtitle{
     text-align: center;
     font-size: 2em;
-
-    & span{
-      background-color: #f7a8e4;
-    }
   }
+}
+
+span{
+  background-color: #f7a8e4;
 }
 
 section.text-section, section.game-introduction{
@@ -59,4 +59,30 @@ section.text-section, section.game-introduction{
   font-weight: 400;
   font-style: italic;
   text-align: justify;
+}
+
+.play-btn{
+  width: 100%;
+  height: auto;
+  padding: .5em 0;
+
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2em;
+
+  background-color: #f7a8e4;
+  color: #fff;
+  border-radius: .5em;
+
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover{
+    background-color: #de7ac3;
+  }
+
+  &:active{
+    background-color: #e783cd;
+  }
 }
