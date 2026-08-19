@@ -56,7 +56,7 @@ function checkWord(){
   const word = wordInput.value.trim().toLowerCase()
 
   if(!word){
-    aviso.textContent = "Digite a resposta"
+    aviso.textContent = 'Digite a resposta'
   }
 
   else if(word === palavraSelecionada){
@@ -66,26 +66,38 @@ function checkWord(){
   }
   
   else {
-    aviso.textContent = "palavra incorreta: " + word + " palavra correta: " + palavraSelecionada
+    aviso.textContent = 'palavra incorreta: ' + word + ' palavra correta: ' + palavraSelecionada
   }
 }
 
-function createInputs(){
+function createInputs() {
   /*
     pega a var [palavraSelecionada], reconhece a [.length], gera o número ideal de inputs
     com o id correspondente a letra do [.length], cria uma var para armazenar o valor esperado de cada input
   */
-
+  inputBox.innerHTML = ''
   let inputQuant = palavraSelecionada.length
 
   for (let i2 = 0; i2 < inputQuant; i2++) {
     const element = document.createElement("input")
-    element.setAttribute("id", palavraSelecionada[i2])
-    element.setAttribute("class", "box")
-    element.setAttribute("maxlength", "1")
+    element.setAttribute("class", 'box')
+    element.setAttribute("maxlength", '1')
+    element.style.textTransform = "uppercase"
+    element.dataset.index = i2
+
+    if(palavraSelecionada[i2] === '/'){
+      element.setAttribute("value", '/')
+    }
+
+    element.addEventListener("keydown", (e) => {
+      if (e.key === 'Backspace' && element.previousElementSibling) {
+        element.value = ''
+        element.previousElementSibling.focus()
+      } else if (element.value && element.nextElementSibling && e.key !== 'Backspace' && e.key !== 'Tab') {
+        element.nextElementSibling.focus()
+      }
+    })
+
     inputBox.appendChild(element)
-
-
-    // console.log(element.getAttribute("id"))
   }
 }
