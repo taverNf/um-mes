@@ -33,7 +33,7 @@
   }
 }
 
-#sendBtn{
+#sendBtn, #closeModalBtn{
   margin-top: 1em;
   border: none;
   font-size: 1.9em;
@@ -44,3 +44,108 @@
   font-size: 2em;
   margin-top: 1em;
 }
+
+/* Estados das respostas (Estilo Termo) */
+
+.box.correct {
+  background-color: #f7a8e4; /* Mesma cor da borda ao focar */
+  border-color: #f7a8e4;
+  color: #fff;
+}
+
+.box.present {
+  background-color: #fbe38e; /* Amarelo pastel suave */
+  border-color: #fbe38e;
+  color: #fff;
+}
+
+.box.absent {
+  background-color: #0002; /* Mantém o estilo original da caixa */
+  border-color: #0004;
+  color: #fff;
+  opacity: 0.5; /* Suaviza a caixa para indicar que a letra não existe */
+}
+
+.box.fixed {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+/* Modal de Tutorial */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1em;
+}
+
+.modal-content {
+  background-color: #d3a49e;
+  border: 3px solid #f7a8e4;
+  border-radius: 1em;
+  padding: 1.5em;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tutorial-text {
+  font-weight: 600;
+  font-family: 'montserrat', sans-serif;
+  font-size: 1.1em;
+  margin-top: 0.8em;
+  line-height: 1.3em;
+}
+
+.exemplo {
+  display: flex;
+  justify-content: center;
+  gap: 0.4em;
+  margin: 1.2em 0;
+}
+
+.exemplo .box {
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  line-height: 42px;
+}
+
+.regras {
+  list-style: none;
+  font-family: 'montserrat', sans-serif;
+  font-size: 0.95em;
+  text-align: left;
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.regras li {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: 600;
+  font-family: 'montserrat';
+}
+
+.legenda {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legenda.correct { background-color: #f7a8e4; }
+.legenda.present { background-color: #fbe38e; }
+.legenda.absent { background-color: #0002; border: 1px solid #0004; }

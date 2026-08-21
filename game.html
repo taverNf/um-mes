@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -13,6 +13,53 @@
     <h1 id="tip" class="title"></h1>
     <div id="inputBox"></div>
     <button onclick="checkWord()" id="sendBtn" class="btn">Enviar</button>
+    <p id="aviso"></p>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo das letrinhas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+  <!-- Modal Tutorial -->
+  <div id="modalTutorial" class="modal">
+    <div class="modal-content">
+      <h2 class="title">Como jogar</h2>
+      <p class="tutorial-text">Acerte as resposta com base nas dicas</p>
+
+      <div class="exemplo">
+        <div class="box correct">T</div>
+        <div class="box present">E</div>
+        <div class="box absent">A</div>
+        <div class="box">M</div>
+        <div class="box">O</div>
+      </div>
+
+      <ul class="regras">
+        <li><span class="legenda correct"></span> Letra/número no lugar certo</li>
+        <li><span class="legenda present"></span> Letra/número certo, mas em outro lugar</li>
+        <li><span class="legenda absent"></span> Letra/número errado</li>
+      </ul>
+
+      <button id="closeModalBtn" class="btn">Começar!</button>
+    </div>
+  </div>
+
+  <section class="game">
+    <h1 id="tip" class="title"></h1>
+    <div id="inputBox"></div>
+    <button id="sendBtn" class="btn">Enviar</button>
     <p id="aviso"></p>
   </section>
 
